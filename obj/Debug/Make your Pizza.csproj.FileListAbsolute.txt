@@ -1,0 +1,11 @@
+E:\Hadhod\c#\Make your Pizza\bin\Debug\Make your Pizza.exe.config
+E:\Hadhod\c#\Make your Pizza\bin\Debug\Make your Pizza.exe
+E:\Hadhod\c#\Make your Pizza\bin\Debug\Make your Pizza.pdb
+E:\Hadhod\c#\Make your Pizza\obj\Debug\Make your Pizza.csproj.AssemblyReference.cache
+E:\Hadhod\c#\Make your Pizza\obj\Debug\Make_your_Pizza.Properties.Resources.resources
+E:\Hadhod\c#\Make your Pizza\obj\Debug\Make your Pizza.csproj.GenerateResource.cache
+E:\Hadhod\c#\Make your Pizza\obj\Debug\Make your Pizza.csproj.CoreCompileInputs.cache
+E:\Hadhod\c#\Make your Pizza\obj\Debug\Make your Pizza.exe
+E:\Hadhod\c#\Make your Pizza\obj\Debug\Make your Pizza.pdb
+E:\Hadhod\c#\Make your Pizza\obj\Debug\Make_your_Pizza.mainscreen.resources
+E:\Hadhod\c#\Make your Pizza\obj\Debug\Make_your_Pizza.loginscreen.resources
