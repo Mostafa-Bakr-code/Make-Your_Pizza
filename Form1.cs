@@ -17,23 +17,6 @@ namespace Make_your_Pizza
             InitializeComponent();
         }
 
-        private void mainscreen_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtlogin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnlogin_Click_1(object sender, EventArgs e)
         {
 
@@ -52,14 +35,5 @@ namespace Make_your_Pizza
 
         }
 
-        private void txtpassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelpassword_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

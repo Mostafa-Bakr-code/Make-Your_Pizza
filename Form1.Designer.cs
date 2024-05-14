@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginscreen));
             this.btnlogin = new System.Windows.Forms.Button();
             this.txtlogin = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,7 +38,8 @@
             // 
             // btnlogin
             // 
-            this.btnlogin.Location = new System.Drawing.Point(393, 182);
+            this.btnlogin.Font = new System.Drawing.Font("Snap ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.Location = new System.Drawing.Point(519, 348);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(121, 48);
             this.btnlogin.TabIndex = 0;
@@ -47,46 +49,45 @@
             // 
             // txtlogin
             // 
-            this.txtlogin.Location = new System.Drawing.Point(154, 164);
+            this.txtlogin.Location = new System.Drawing.Point(509, 146);
             this.txtlogin.Name = "txtlogin";
             this.txtlogin.Size = new System.Drawing.Size(141, 20);
             this.txtlogin.TabIndex = 1;
             this.txtlogin.Tag = "a";
-            this.txtlogin.TextChanged += new System.EventHandler(this.txtlogin_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(197, 131);
+            this.label1.Font = new System.Drawing.Font("Snap ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(356, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(137, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "User Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(153, 227);
+            this.txtpassword.Location = new System.Drawing.Point(509, 205);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(142, 20);
             this.txtpassword.TabIndex = 3;
             this.txtpassword.Tag = "1";
-            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
             // labelpassword
             // 
             this.labelpassword.AutoSize = true;
-            this.labelpassword.Location = new System.Drawing.Point(197, 200);
+            this.labelpassword.Font = new System.Drawing.Font("Snap ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelpassword.Location = new System.Drawing.Point(356, 205);
             this.labelpassword.Name = "labelpassword";
-            this.labelpassword.Size = new System.Drawing.Size(53, 13);
+            this.labelpassword.Size = new System.Drawing.Size(125, 25);
             this.labelpassword.TabIndex = 4;
             this.labelpassword.Text = "Password";
-            this.labelpassword.Click += new System.EventHandler(this.labelpassword_Click);
             // 
             // loginscreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelpassword);
             this.Controls.Add(this.txtpassword);
@@ -95,7 +96,6 @@
             this.Controls.Add(this.btnlogin);
             this.Name = "loginscreen";
             this.Text = "Log In Screen";
-            this.Load += new System.EventHandler(this.mainscreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

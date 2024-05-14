@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.label1 = new System.Windows.Forms.Label();
             this.boxsize = new System.Windows.Forms.GroupBox();
             this.rblarge = new System.Windows.Forms.RadioButton();
@@ -69,21 +70,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Font = new System.Drawing.Font("Snap ITC", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(260, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 39);
+            this.label1.Size = new System.Drawing.Size(356, 43);
             this.label1.TabIndex = 0;
             this.label1.Text = "Make Your Pizza";
             // 
             // boxsize
             // 
+            this.boxsize.BackColor = System.Drawing.SystemColors.Info;
             this.boxsize.Controls.Add(this.rblarge);
             this.boxsize.Controls.Add(this.rbmedium);
             this.boxsize.Controls.Add(this.rbsmall);
-            this.boxsize.Location = new System.Drawing.Point(55, 106);
+            this.boxsize.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxsize.Location = new System.Drawing.Point(34, 74);
             this.boxsize.Name = "boxsize";
-            this.boxsize.Size = new System.Drawing.Size(155, 119);
+            this.boxsize.Size = new System.Drawing.Size(155, 142);
             this.boxsize.TabIndex = 1;
             this.boxsize.TabStop = false;
             this.boxsize.Text = "Size";
@@ -91,48 +96,57 @@
             // rblarge
             // 
             this.rblarge.AutoSize = true;
-            this.rblarge.Location = new System.Drawing.Point(6, 96);
+            this.rblarge.BackColor = System.Drawing.Color.Transparent;
+            this.rblarge.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rblarge.ForeColor = System.Drawing.Color.Black;
+            this.rblarge.Location = new System.Drawing.Point(6, 97);
             this.rblarge.Name = "rblarge";
-            this.rblarge.Size = new System.Drawing.Size(52, 17);
+            this.rblarge.Size = new System.Drawing.Size(103, 31);
             this.rblarge.TabIndex = 2;
-            this.rblarge.TabStop = true;
             this.rblarge.Tag = "30";
             this.rblarge.Text = "Large";
-            this.rblarge.UseVisualStyleBackColor = true;
+            this.rblarge.UseVisualStyleBackColor = false;
             this.rblarge.CheckedChanged += new System.EventHandler(this.rblarge_CheckedChanged);
             // 
             // rbmedium
             // 
             this.rbmedium.AutoSize = true;
+            this.rbmedium.BackColor = System.Drawing.Color.Transparent;
+            this.rbmedium.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbmedium.ForeColor = System.Drawing.Color.Black;
             this.rbmedium.Location = new System.Drawing.Point(6, 63);
             this.rbmedium.Name = "rbmedium";
-            this.rbmedium.Size = new System.Drawing.Size(62, 17);
+            this.rbmedium.Size = new System.Drawing.Size(125, 31);
             this.rbmedium.TabIndex = 1;
-            this.rbmedium.TabStop = true;
             this.rbmedium.Tag = "20";
             this.rbmedium.Text = "Medium";
-            this.rbmedium.UseVisualStyleBackColor = true;
+            this.rbmedium.UseVisualStyleBackColor = false;
             this.rbmedium.CheckedChanged += new System.EventHandler(this.rbmedium_CheckedChanged);
             // 
             // rbsmall
             // 
             this.rbsmall.AutoSize = true;
+            this.rbsmall.BackColor = System.Drawing.Color.Transparent;
             this.rbsmall.Checked = true;
+            this.rbsmall.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbsmall.ForeColor = System.Drawing.Color.Black;
             this.rbsmall.Location = new System.Drawing.Point(6, 30);
             this.rbsmall.Name = "rbsmall";
-            this.rbsmall.Size = new System.Drawing.Size(50, 17);
+            this.rbsmall.Size = new System.Drawing.Size(99, 31);
             this.rbsmall.TabIndex = 0;
             this.rbsmall.TabStop = true;
             this.rbsmall.Tag = "10";
             this.rbsmall.Text = "Small";
-            this.rbsmall.UseVisualStyleBackColor = true;
+            this.rbsmall.UseVisualStyleBackColor = false;
             this.rbsmall.CheckedChanged += new System.EventHandler(this.rbsmall_CheckedChanged);
             // 
             // boxcrust
             // 
+            this.boxcrust.BackColor = System.Drawing.SystemColors.Info;
             this.boxcrust.Controls.Add(this.rbthick);
             this.boxcrust.Controls.Add(this.rbthin);
-            this.boxcrust.Location = new System.Drawing.Point(267, 106);
+            this.boxcrust.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxcrust.Location = new System.Drawing.Point(197, 83);
             this.boxcrust.Name = "boxcrust";
             this.boxcrust.Size = new System.Drawing.Size(155, 119);
             this.boxcrust.TabIndex = 3;
@@ -143,9 +157,10 @@
             // 
             this.rbthick.AutoSize = true;
             this.rbthick.Checked = true;
+            this.rbthick.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbthick.Location = new System.Drawing.Point(6, 63);
             this.rbthick.Name = "rbthick";
-            this.rbthick.Size = new System.Drawing.Size(52, 17);
+            this.rbthick.Size = new System.Drawing.Size(99, 31);
             this.rbthick.TabIndex = 1;
             this.rbthick.TabStop = true;
             this.rbthick.Tag = "0";
@@ -156,11 +171,11 @@
             // rbthin
             // 
             this.rbthin.AutoSize = true;
+            this.rbthin.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbthin.Location = new System.Drawing.Point(6, 30);
             this.rbthin.Name = "rbthin";
-            this.rbthin.Size = new System.Drawing.Size(46, 17);
+            this.rbthin.Size = new System.Drawing.Size(85, 31);
             this.rbthin.TabIndex = 0;
-            this.rbthin.TabStop = true;
             this.rbthin.Tag = "5";
             this.rbthin.Text = "Thin";
             this.rbthin.UseVisualStyleBackColor = true;
@@ -168,11 +183,13 @@
             // 
             // boxwheretoeat
             // 
+            this.boxwheretoeat.BackColor = System.Drawing.SystemColors.Info;
             this.boxwheretoeat.Controls.Add(this.rbtakeout);
             this.boxwheretoeat.Controls.Add(this.rbeatin);
-            this.boxwheretoeat.Location = new System.Drawing.Point(55, 242);
+            this.boxwheretoeat.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxwheretoeat.Location = new System.Drawing.Point(375, 83);
             this.boxwheretoeat.Name = "boxwheretoeat";
-            this.boxwheretoeat.Size = new System.Drawing.Size(155, 119);
+            this.boxwheretoeat.Size = new System.Drawing.Size(183, 119);
             this.boxwheretoeat.TabIndex = 3;
             this.boxwheretoeat.TabStop = false;
             this.boxwheretoeat.Text = "Where To Eat?";
@@ -180,11 +197,11 @@
             // rbtakeout
             // 
             this.rbtakeout.AutoSize = true;
+            this.rbtakeout.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtakeout.Location = new System.Drawing.Point(6, 63);
             this.rbtakeout.Name = "rbtakeout";
-            this.rbtakeout.Size = new System.Drawing.Size(79, 17);
+            this.rbtakeout.Size = new System.Drawing.Size(171, 31);
             this.rbtakeout.TabIndex = 1;
-            this.rbtakeout.TabStop = true;
             this.rbtakeout.Text = "Take Away";
             this.rbtakeout.UseVisualStyleBackColor = true;
             this.rbtakeout.CheckedChanged += new System.EventHandler(this.rbtakeout_CheckedChanged);
@@ -193,9 +210,10 @@
             // 
             this.rbeatin.AutoSize = true;
             this.rbeatin.Checked = true;
+            this.rbeatin.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbeatin.Location = new System.Drawing.Point(6, 30);
             this.rbeatin.Name = "rbeatin";
-            this.rbeatin.Size = new System.Drawing.Size(53, 17);
+            this.rbeatin.Size = new System.Drawing.Size(113, 31);
             this.rbeatin.TabIndex = 0;
             this.rbeatin.TabStop = true;
             this.rbeatin.Text = "Eat In";
@@ -204,15 +222,17 @@
             // 
             // boxtoppings
             // 
+            this.boxtoppings.BackColor = System.Drawing.SystemColors.Info;
             this.boxtoppings.Controls.Add(this.chktomatos);
             this.boxtoppings.Controls.Add(this.chkextracheese);
             this.boxtoppings.Controls.Add(this.chkgreenpeppers);
             this.boxtoppings.Controls.Add(this.chkolives);
             this.boxtoppings.Controls.Add(this.chkonions);
             this.boxtoppings.Controls.Add(this.chkmushrooms);
-            this.boxtoppings.Location = new System.Drawing.Point(257, 242);
+            this.boxtoppings.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxtoppings.Location = new System.Drawing.Point(34, 242);
             this.boxtoppings.Name = "boxtoppings";
-            this.boxtoppings.Size = new System.Drawing.Size(231, 119);
+            this.boxtoppings.Size = new System.Drawing.Size(375, 119);
             this.boxtoppings.TabIndex = 3;
             this.boxtoppings.TabStop = false;
             this.boxtoppings.Text = "Toppings";
@@ -220,9 +240,11 @@
             // chktomatos
             // 
             this.chktomatos.AutoSize = true;
+            this.chktomatos.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chktomatos.ForeColor = System.Drawing.Color.Black;
             this.chktomatos.Location = new System.Drawing.Point(20, 77);
             this.chktomatos.Name = "chktomatos";
-            this.chktomatos.Size = new System.Drawing.Size(67, 17);
+            this.chktomatos.Size = new System.Drawing.Size(137, 31);
             this.chktomatos.TabIndex = 5;
             this.chktomatos.Tag = "2";
             this.chktomatos.Text = "Tomatos";
@@ -232,9 +254,10 @@
             // chkextracheese
             // 
             this.chkextracheese.AutoSize = true;
-            this.chkextracheese.Location = new System.Drawing.Point(106, 53);
+            this.chkextracheese.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkextracheese.Location = new System.Drawing.Point(160, 54);
             this.chkextracheese.Name = "chkextracheese";
-            this.chkextracheese.Size = new System.Drawing.Size(89, 17);
+            this.chkextracheese.Size = new System.Drawing.Size(206, 31);
             this.chkextracheese.TabIndex = 4;
             this.chkextracheese.Tag = "2";
             this.chkextracheese.Text = "Extra Cheese";
@@ -244,9 +267,10 @@
             // chkgreenpeppers
             // 
             this.chkgreenpeppers.AutoSize = true;
-            this.chkgreenpeppers.Location = new System.Drawing.Point(106, 77);
+            this.chkgreenpeppers.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkgreenpeppers.Location = new System.Drawing.Point(160, 77);
             this.chkgreenpeppers.Name = "chkgreenpeppers";
-            this.chkgreenpeppers.Size = new System.Drawing.Size(92, 17);
+            this.chkgreenpeppers.Size = new System.Drawing.Size(203, 31);
             this.chkgreenpeppers.TabIndex = 3;
             this.chkgreenpeppers.Tag = "2";
             this.chkgreenpeppers.Text = "Green Pepper";
@@ -256,9 +280,10 @@
             // chkolives
             // 
             this.chkolives.AutoSize = true;
+            this.chkolives.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkolives.Location = new System.Drawing.Point(20, 54);
             this.chkolives.Name = "chkolives";
-            this.chkolives.Size = new System.Drawing.Size(55, 17);
+            this.chkolives.Size = new System.Drawing.Size(114, 31);
             this.chkolives.TabIndex = 1;
             this.chkolives.Tag = "2";
             this.chkolives.Text = "Olives";
@@ -268,9 +293,10 @@
             // chkonions
             // 
             this.chkonions.AutoSize = true;
+            this.chkonions.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkonions.Location = new System.Drawing.Point(20, 31);
             this.chkonions.Name = "chkonions";
-            this.chkonions.Size = new System.Drawing.Size(59, 17);
+            this.chkonions.Size = new System.Drawing.Size(116, 31);
             this.chkonions.TabIndex = 0;
             this.chkonions.Tag = "2";
             this.chkonions.Text = "Onions";
@@ -280,9 +306,10 @@
             // chkmushrooms
             // 
             this.chkmushrooms.AutoSize = true;
-            this.chkmushrooms.Location = new System.Drawing.Point(106, 30);
+            this.chkmushrooms.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkmushrooms.Location = new System.Drawing.Point(160, 31);
             this.chkmushrooms.Name = "chkmushrooms";
-            this.chkmushrooms.Size = new System.Drawing.Size(80, 17);
+            this.chkmushrooms.Size = new System.Drawing.Size(171, 31);
             this.chkmushrooms.TabIndex = 2;
             this.chkmushrooms.Tag = "2";
             this.chkmushrooms.Text = "Mushrooms";
@@ -291,6 +318,7 @@
             // 
             // boxsummary
             // 
+            this.boxsummary.BackColor = System.Drawing.Color.Black;
             this.boxsummary.Controls.Add(this.lbtotalprice);
             this.boxsummary.Controls.Add(this.lbcrust);
             this.boxsummary.Controls.Add(this.lbtoppings);
@@ -301,7 +329,9 @@
             this.boxsummary.Controls.Add(this.label4);
             this.boxsummary.Controls.Add(this.label3);
             this.boxsummary.Controls.Add(this.label2);
-            this.boxsummary.Location = new System.Drawing.Point(527, 106);
+            this.boxsummary.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxsummary.ForeColor = System.Drawing.Color.Yellow;
+            this.boxsummary.Location = new System.Drawing.Point(576, 83);
             this.boxsummary.Name = "boxsummary";
             this.boxsummary.Size = new System.Drawing.Size(212, 255);
             this.boxsummary.TabIndex = 4;
@@ -310,25 +340,27 @@
             // 
             // lbtotalprice
             // 
-            this.lbtotalprice.AutoSize = true;
-            this.lbtotalprice.Location = new System.Drawing.Point(78, 203);
+            this.lbtotalprice.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtotalprice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbtotalprice.Location = new System.Drawing.Point(106, 203);
             this.lbtotalprice.MinimumSize = new System.Drawing.Size(100, 0);
             this.lbtotalprice.Name = "lbtotalprice";
-            this.lbtotalprice.Size = new System.Drawing.Size(100, 13);
+            this.lbtotalprice.Size = new System.Drawing.Size(100, 17);
             this.lbtotalprice.TabIndex = 9;
             // 
             // lbcrust
             // 
             this.lbcrust.AutoSize = true;
-            this.lbcrust.Location = new System.Drawing.Point(55, 68);
+            this.lbcrust.Location = new System.Drawing.Point(68, 68);
             this.lbcrust.MinimumSize = new System.Drawing.Size(100, 0);
             this.lbcrust.Name = "lbcrust";
-            this.lbcrust.Size = new System.Drawing.Size(100, 13);
+            this.lbcrust.Size = new System.Drawing.Size(100, 27);
             this.lbcrust.TabIndex = 8;
             // 
             // lbtoppings
             // 
-            this.lbtoppings.Location = new System.Drawing.Point(11, 122);
+            this.lbtoppings.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtoppings.Location = new System.Drawing.Point(6, 125);
             this.lbtoppings.MinimumSize = new System.Drawing.Size(170, 30);
             this.lbtoppings.Name = "lbtoppings";
             this.lbtoppings.Size = new System.Drawing.Size(200, 30);
@@ -338,19 +370,20 @@
             // lbwheretoeat
             // 
             this.lbwheretoeat.AutoSize = true;
-            this.lbwheretoeat.Location = new System.Drawing.Point(89, 167);
+            this.lbwheretoeat.Location = new System.Drawing.Point(112, 166);
             this.lbwheretoeat.MinimumSize = new System.Drawing.Size(100, 0);
             this.lbwheretoeat.Name = "lbwheretoeat";
-            this.lbwheretoeat.Size = new System.Drawing.Size(100, 13);
+            this.lbwheretoeat.Size = new System.Drawing.Size(100, 27);
             this.lbwheretoeat.TabIndex = 6;
             // 
             // lbsize
             // 
             this.lbsize.AutoSize = true;
+            this.lbsize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbsize.Location = new System.Drawing.Point(55, 35);
             this.lbsize.MinimumSize = new System.Drawing.Size(100, 0);
             this.lbsize.Name = "lbsize";
-            this.lbsize.Size = new System.Drawing.Size(100, 13);
+            this.lbsize.Size = new System.Drawing.Size(100, 27);
             this.lbsize.TabIndex = 5;
             // 
             // label6
@@ -358,7 +391,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 166);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.Size = new System.Drawing.Size(88, 27);
             this.label6.TabIndex = 4;
             this.label6.Text = "Where To Eat:";
             // 
@@ -367,7 +400,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(11, 68);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(44, 27);
             this.label5.TabIndex = 3;
             this.label5.Text = "Crust:";
             // 
@@ -376,7 +409,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(63, 27);
             this.label4.TabIndex = 2;
             this.label4.Text = "Toppings:";
             // 
@@ -385,7 +418,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(11, 203);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(71, 27);
             this.label3.TabIndex = 1;
             this.label3.Text = "Total Price:";
             // 
@@ -394,34 +427,39 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(37, 27);
             this.label2.TabIndex = 0;
             this.label2.Text = "Size:";
             // 
             // btnorder
             // 
+            this.btnorder.BackColor = System.Drawing.SystemColors.Info;
+            this.btnorder.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnorder.Location = new System.Drawing.Point(256, 399);
             this.btnorder.Name = "btnorder";
             this.btnorder.Size = new System.Drawing.Size(113, 39);
             this.btnorder.TabIndex = 5;
             this.btnorder.Text = "Order Pizza";
-            this.btnorder.UseVisualStyleBackColor = true;
+            this.btnorder.UseVisualStyleBackColor = false;
             this.btnorder.Click += new System.EventHandler(this.btnorder_Click);
             // 
             // btnreset
             // 
+            this.btnreset.BackColor = System.Drawing.SystemColors.Info;
+            this.btnreset.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnreset.Location = new System.Drawing.Point(375, 399);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(113, 39);
             this.btnreset.TabIndex = 6;
             this.btnreset.Text = "Reset";
-            this.btnreset.UseVisualStyleBackColor = true;
+            this.btnreset.UseVisualStyleBackColor = false;
             this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
             // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnreset);
             this.Controls.Add(this.btnorder);
