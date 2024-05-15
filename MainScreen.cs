@@ -43,6 +43,7 @@ namespace Make_your_Pizza
             btnorder.Enabled = true;
 
         }
+
         void updateSize()
         {
             
@@ -51,6 +52,7 @@ namespace Make_your_Pizza
             if (rbsmall.Checked)
             {
                 lbsize.Text = "Small";
+                return;
                 
                 
             }
@@ -58,12 +60,14 @@ namespace Make_your_Pizza
             if (rbmedium.Checked)
             {
                 lbsize.Text = "Medium";
+                return;
                 
             }
 
             if (rblarge.Checked)
             {
                 lbsize.Text = "Large";
+                return;
                 
             }
         }
@@ -75,10 +79,12 @@ namespace Make_your_Pizza
             if (rbthick.Checked)
             {
                 lbcrust.Text = "Thick";
+                return;
             }
             if (rbthin.Checked)
             {
                 lbcrust.Text = "Thin";
+                return;
             }
         }
 
@@ -117,7 +123,12 @@ namespace Make_your_Pizza
                 toppings += ", Tomatos";
             }
 
-            if(toppings == "")
+            if (toppings.StartsWith(","))
+            {
+                toppings = toppings.Substring(1, toppings.Length - 1).Trim();
+            }
+
+            if (toppings == "")
             {
                 toppings = "No Toppings";
                 
@@ -131,11 +142,13 @@ namespace Make_your_Pizza
             if (rbeatin.Checked)
             {
                 lbwheretoeat.Text = "Eat In";
+                return;
             }
 
             if(rbtakeout.Checked)
             {
                 lbwheretoeat.Text = "Take Away";
+                return;
             }
         }
 
@@ -202,10 +215,15 @@ namespace Make_your_Pizza
             return toppingPrice;
         }
 
+        float calcTotalPrice()
+        {
+            return getSizePrice() + getCrustPrice() + getToppingsPrice();
+        }
+
         void updateTotalPrice()
         {
 
-            totalPrice = getSizePrice() + getCrustPrice() + getToppingsPrice();
+            totalPrice = calcTotalPrice();
             lbtotalprice.Text = totalPrice.ToString() + "$";
         }
 
