@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Make_your_Pizza.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,10 @@ namespace Make_your_Pizza
             rbthick.Checked = true;
             rbtakeout.Checked = true;
             btnorder.Enabled = true;
+
+            rbamerican.Checked = true;
+            rbitalian.Checked = false;
+            bgpizzatype.Enabled = true;
 
         }
 
@@ -215,9 +220,23 @@ namespace Make_your_Pizza
             return toppingPrice;
         }
 
+        float getDoughPrice()
+        {
+            if (rbamerican.Checked)
+            {
+                return Convert.ToSingle(rbamerican.Tag);
+            }
+
+            else
+            {
+                return Convert.ToSingle(rbitalian.Tag);
+            }
+
+        }
+
         float calcTotalPrice()
         {
-            return getSizePrice() + getCrustPrice() + getToppingsPrice();
+            return getSizePrice() + getCrustPrice() + getToppingsPrice() + getDoughPrice();
         }
 
         void updateTotalPrice()
@@ -235,6 +254,42 @@ namespace Make_your_Pizza
             updateToppings();
             updateWhereToEat();
             updateTotalPrice();
+        }
+
+        void updatedoughimage()
+        {
+            if (rbamerican.Checked)
+            {
+                pbpizzatype.Image = Resources.american_pizza;
+                return;
+            }
+
+            if (rbitalian.Checked)
+            {
+                pbpizzatype.Image = Resources.italian_pizza;
+                return;
+            }
+
+
+        }
+
+        void updateDoughType()
+        {
+            updateTotalPrice();
+            updatedoughimage();
+
+            if(rbamerican.Checked)
+            {
+                lbdough.Text = "American";
+                return;
+            }
+
+            if (rbitalian.Checked)
+            {
+                lbdough.Text = "Italian";
+                return;
+            }
+
         }
 
         private void rbthin_CheckedChanged(object sender, EventArgs e)
@@ -312,6 +367,7 @@ namespace Make_your_Pizza
                 boxtoppings.Enabled = false;
                 boxwheretoeat.Enabled = false;
                 btnorder.Enabled = false;
+                bgpizzatype.Enabled = false;
             }
 
             else
@@ -330,6 +386,15 @@ namespace Make_your_Pizza
             resetForm();
         }
 
+        private void rbamerican_CheckedChanged(object sender, EventArgs e)
+        {
+            updateDoughType();
+            
+        }
 
+        private void rbitalian_CheckedChanged(object sender, EventArgs e)
+        {
+            updateDoughType();
+        }
     }
 }

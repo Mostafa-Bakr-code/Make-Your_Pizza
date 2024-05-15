@@ -48,6 +48,8 @@
             this.chkonions = new System.Windows.Forms.CheckBox();
             this.chkmushrooms = new System.Windows.Forms.CheckBox();
             this.boxsummary = new System.Windows.Forms.GroupBox();
+            this.lbdough = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.lbtotalprice = new System.Windows.Forms.Label();
             this.lbcrust = new System.Windows.Forms.Label();
             this.lbtoppings = new System.Windows.Forms.Label();
@@ -60,11 +62,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnorder = new System.Windows.Forms.Button();
             this.btnreset = new System.Windows.Forms.Button();
+            this.pbpizzatype = new System.Windows.Forms.PictureBox();
+            this.bgpizzatype = new System.Windows.Forms.GroupBox();
+            this.rbitalian = new System.Windows.Forms.RadioButton();
+            this.rbamerican = new System.Windows.Forms.RadioButton();
             this.boxsize.SuspendLayout();
             this.boxcrust.SuspendLayout();
             this.boxwheretoeat.SuspendLayout();
             this.boxtoppings.SuspendLayout();
             this.boxsummary.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbpizzatype)).BeginInit();
+            this.bgpizzatype.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -230,7 +238,7 @@
             this.boxtoppings.Controls.Add(this.chkonions);
             this.boxtoppings.Controls.Add(this.chkmushrooms);
             this.boxtoppings.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxtoppings.Location = new System.Drawing.Point(34, 242);
+            this.boxtoppings.Location = new System.Drawing.Point(34, 219);
             this.boxtoppings.Name = "boxtoppings";
             this.boxtoppings.Size = new System.Drawing.Size(375, 119);
             this.boxtoppings.TabIndex = 3;
@@ -319,6 +327,8 @@
             // boxsummary
             // 
             this.boxsummary.BackColor = System.Drawing.Color.Black;
+            this.boxsummary.Controls.Add(this.lbdough);
+            this.boxsummary.Controls.Add(this.label7);
             this.boxsummary.Controls.Add(this.lbtotalprice);
             this.boxsummary.Controls.Add(this.lbcrust);
             this.boxsummary.Controls.Add(this.lbtoppings);
@@ -333,16 +343,34 @@
             this.boxsummary.ForeColor = System.Drawing.Color.Yellow;
             this.boxsummary.Location = new System.Drawing.Point(576, 83);
             this.boxsummary.Name = "boxsummary";
-            this.boxsummary.Size = new System.Drawing.Size(212, 255);
+            this.boxsummary.Size = new System.Drawing.Size(212, 301);
             this.boxsummary.TabIndex = 4;
             this.boxsummary.TabStop = false;
             this.boxsummary.Text = "Order Summary";
+            // 
+            // lbdough
+            // 
+            this.lbdough.AutoSize = true;
+            this.lbdough.Location = new System.Drawing.Point(68, 213);
+            this.lbdough.MinimumSize = new System.Drawing.Size(100, 0);
+            this.lbdough.Name = "lbdough";
+            this.lbdough.Size = new System.Drawing.Size(100, 27);
+            this.lbdough.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(11, 213);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 27);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Dough";
             // 
             // lbtotalprice
             // 
             this.lbtotalprice.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtotalprice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbtotalprice.Location = new System.Drawing.Point(106, 203);
+            this.lbtotalprice.Location = new System.Drawing.Point(89, 263);
             this.lbtotalprice.MinimumSize = new System.Drawing.Size(100, 0);
             this.lbtotalprice.Name = "lbtotalprice";
             this.lbtotalprice.Size = new System.Drawing.Size(100, 17);
@@ -416,7 +444,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 203);
+            this.label3.Location = new System.Drawing.Point(11, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 27);
             this.label3.TabIndex = 1;
@@ -435,7 +463,7 @@
             // 
             this.btnorder.BackColor = System.Drawing.SystemColors.Info;
             this.btnorder.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnorder.Location = new System.Drawing.Point(256, 399);
+            this.btnorder.Location = new System.Drawing.Point(550, 390);
             this.btnorder.Name = "btnorder";
             this.btnorder.Size = new System.Drawing.Size(113, 39);
             this.btnorder.TabIndex = 5;
@@ -447,7 +475,7 @@
             // 
             this.btnreset.BackColor = System.Drawing.SystemColors.Info;
             this.btnreset.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreset.Location = new System.Drawing.Point(375, 399);
+            this.btnreset.Location = new System.Drawing.Point(669, 390);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(113, 39);
             this.btnreset.TabIndex = 6;
@@ -455,12 +483,65 @@
             this.btnreset.UseVisualStyleBackColor = false;
             this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
             // 
+            // pbpizzatype
+            // 
+            this.pbpizzatype.Image = global::Make_your_Pizza.Properties.Resources.american_pizza;
+            this.pbpizzatype.Location = new System.Drawing.Point(171, 366);
+            this.pbpizzatype.Name = "pbpizzatype";
+            this.pbpizzatype.Size = new System.Drawing.Size(91, 72);
+            this.pbpizzatype.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbpizzatype.TabIndex = 7;
+            this.pbpizzatype.TabStop = false;
+            // 
+            // bgpizzatype
+            // 
+            this.bgpizzatype.BackColor = System.Drawing.SystemColors.Info;
+            this.bgpizzatype.Controls.Add(this.rbitalian);
+            this.bgpizzatype.Controls.Add(this.rbamerican);
+            this.bgpizzatype.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bgpizzatype.Location = new System.Drawing.Point(279, 346);
+            this.bgpizzatype.Name = "bgpizzatype";
+            this.bgpizzatype.Size = new System.Drawing.Size(173, 92);
+            this.bgpizzatype.TabIndex = 4;
+            this.bgpizzatype.TabStop = false;
+            this.bgpizzatype.Text = "Dough";
+            // 
+            // rbitalian
+            // 
+            this.rbitalian.AutoSize = true;
+            this.rbitalian.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbitalian.Location = new System.Drawing.Point(6, 63);
+            this.rbitalian.Name = "rbitalian";
+            this.rbitalian.Size = new System.Drawing.Size(119, 31);
+            this.rbitalian.TabIndex = 1;
+            this.rbitalian.Tag = "7";
+            this.rbitalian.Text = "Italian";
+            this.rbitalian.UseVisualStyleBackColor = true;
+            this.rbitalian.CheckedChanged += new System.EventHandler(this.rbitalian_CheckedChanged);
+            // 
+            // rbamerican
+            // 
+            this.rbamerican.AutoSize = true;
+            this.rbamerican.Checked = true;
+            this.rbamerican.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbamerican.Location = new System.Drawing.Point(6, 26);
+            this.rbamerican.Name = "rbamerican";
+            this.rbamerican.Size = new System.Drawing.Size(146, 31);
+            this.rbamerican.TabIndex = 0;
+            this.rbamerican.TabStop = true;
+            this.rbamerican.Tag = "5";
+            this.rbamerican.Text = "American";
+            this.rbamerican.UseVisualStyleBackColor = true;
+            this.rbamerican.CheckedChanged += new System.EventHandler(this.rbamerican_CheckedChanged);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bgpizzatype);
+            this.Controls.Add(this.pbpizzatype);
             this.Controls.Add(this.btnreset);
             this.Controls.Add(this.btnorder);
             this.Controls.Add(this.boxsummary);
@@ -482,6 +563,9 @@
             this.boxtoppings.PerformLayout();
             this.boxsummary.ResumeLayout(false);
             this.boxsummary.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbpizzatype)).EndInit();
+            this.bgpizzatype.ResumeLayout(false);
+            this.bgpizzatype.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,5 +604,11 @@
         private System.Windows.Forms.Label lbcrust;
         private System.Windows.Forms.Label lbtoppings;
         private System.Windows.Forms.Label lbwheretoeat;
+        private System.Windows.Forms.PictureBox pbpizzatype;
+        private System.Windows.Forms.GroupBox bgpizzatype;
+        private System.Windows.Forms.RadioButton rbitalian;
+        private System.Windows.Forms.RadioButton rbamerican;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbdough;
     }
 }
